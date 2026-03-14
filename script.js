@@ -207,8 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
         photosData['common'].forEach((photo, index) => {
             const item = document.createElement('div');
             item.className = 'gallery-item';
-            // Make some items wide for visual variety
-            if (index % 5 === 0) item.classList.add('wide');
+            // No 'wide' class for the inline common gallery - all items uniform
             item.innerHTML = `<img src="${photo}" alt="Everyday Memory ${index + 1}" loading="lazy" onclick="openLightbox('${photo}')">`;
             commonGrid.appendChild(item);
         });

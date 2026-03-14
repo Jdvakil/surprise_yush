@@ -436,34 +436,24 @@ a.card-link {
 /* Common Gallery */
 .common-gallery-grid {
     display: flex;
-    flex-wrap: nowrap;
-    gap: 16px;
+    flex-wrap: wrap;
+    gap: 12px;
     margin-bottom: 80px;
-    padding-bottom: 20px;
-    overflow-x: auto;
-    /* Hide scrollbar visually but allow scrolling */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
-.common-gallery-grid::-webkit-scrollbar {
-    display: none; /* Chrome, Safari and Opera */
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .common-gallery-grid .gallery-item {
-    height: 150px;
+    height: 160px;
     width: auto;
-    flex: 0 0 auto; /* Prevent shrinking */
+    flex: 0 0 auto;
     margin: 0;
     overflow: hidden;
     border-radius: 12px;
     background: transparent;
     display: block;
     box-shadow: var(--shadow);
-}
-
-.common-gallery-grid .gallery-item.wide {
-    aspect-ratio: auto;
-    grid-column: auto;
+    aspect-ratio: auto !important;
 }
 
 .common-gallery-grid .gallery-item img {
@@ -471,6 +461,7 @@ a.card-link {
     width: auto;
     object-fit: cover;
     display: block;
+    border-radius: 12px;
 }
 
 /* Mobile Tweaks */
