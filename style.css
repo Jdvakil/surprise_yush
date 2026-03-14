@@ -461,6 +461,11 @@ a.card-link {
     box-shadow: var(--shadow);
 }
 
+.common-gallery-grid .gallery-item.wide {
+    aspect-ratio: auto;
+    grid-column: auto;
+}
+
 .common-gallery-grid .gallery-item img {
     height: 100%;
     width: auto;
