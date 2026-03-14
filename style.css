@@ -461,10 +461,6 @@ a.card-link {
     box-shadow: var(--shadow);
 }
 
-.common-gallery-grid .gallery-item.wide {
-    /* No wide behavior needed for inline scroll */
-}
-
 .common-gallery-grid .gallery-item img {
     height: 100%;
     width: auto;
