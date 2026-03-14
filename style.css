@@ -444,6 +444,13 @@ a.card-link {
 .common-gallery-grid .gallery-item {
     aspect-ratio: auto;
     height: 250px;
+    overflow: hidden;
+}
+
+.common-gallery-grid .gallery-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* Mobile Tweaks */

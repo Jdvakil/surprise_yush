@@ -97,8 +97,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Find which gallery we're in
         const currentGallery = document.querySelector('.gallery-grid, .common-gallery-grid');
         if (currentGallery) {
-             currentGalleryPhotos = Array.from(currentGallery.querySelectorAll('img')).map(img => img.src);
+             // Use getAttribute('src') instead of .src to match the relative path passed to openLightbox
+             currentGalleryPhotos = Array.from(currentGallery.querySelectorAll('img')).map(img => img.getAttribute('src'));
              currentIndex = currentGalleryPhotos.indexOf(src);
+             // Fallback if not found (just in case)
+             if (currentIndex === -1) currentIndex = 0;
         } else {
             currentGalleryPhotos = [src];
             currentIndex = 0;
