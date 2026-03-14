@@ -435,28 +435,26 @@ a.card-link {
 
 /* Common Gallery */
 .common-gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
     margin-bottom: 80px;
     justify-content: center;
 }
 
 .common-gallery-grid .gallery-item {
-    aspect-ratio: 1 / 1;
-    height: auto;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.05); /* subtle background for the container */
-    border-radius: 12px;
+    height: 140px;
+    width: auto;
+    margin-bottom: 0; /* override earlier masonry margin */
+    background: transparent;
+    display: block; /* override earlier flex */
 }
 
 .common-gallery-grid .gallery-item img {
     height: 100%;
-    width: 100%;
+    width: auto;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 /* Mobile Tweaks */
