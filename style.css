@@ -435,32 +435,39 @@ a.card-link {
 
 /* Common Gallery */
 .common-gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    display: flex;
+    flex-wrap: nowrap;
     gap: 16px;
     margin-bottom: 80px;
-    justify-content: center;
+    padding-bottom: 20px;
+    overflow-x: auto;
+    /* Hide scrollbar visually but allow scrolling */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.common-gallery-grid::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
 }
 
 .common-gallery-grid .gallery-item {
-    aspect-ratio: 1;
-    width: 100%;
+    height: 150px;
+    width: auto;
+    flex: 0 0 auto; /* Prevent shrinking */
     margin: 0;
     overflow: hidden;
     border-radius: 12px;
-    background: rgba(255,255,255,0.05);
+    background: transparent;
     display: block;
     box-shadow: var(--shadow);
 }
 
 .common-gallery-grid .gallery-item.wide {
-    grid-column: span 2;
-    aspect-ratio: 2 / 1;
+    /* No wide behavior needed for inline scroll */
 }
 
 .common-gallery-grid .gallery-item img {
     height: 100%;
-    width: 100%;
+    width: auto;
     object-fit: cover;
     display: block;
 }
