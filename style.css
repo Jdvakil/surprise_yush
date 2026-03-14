@@ -445,12 +445,19 @@ a.card-link {
     aspect-ratio: auto;
     height: 250px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05); /* subtle background for the container */
+    border-radius: 12px;
 }
 
 .common-gallery-grid .gallery-item img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: scale-down;
 }
 
 /* Mobile Tweaks */
